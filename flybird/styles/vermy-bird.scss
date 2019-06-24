@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Press+Start+2P');
+
+$font-game-title: 'Permanent Marker', cursive;
+$font-game-score: 'Press Start 2P', cursive;
+
+$game-background: darkslateblue;
+$game-white-color: whitesmoke;
+
+$stage-game-background: deepskyblue;
+$stage-game-border: dodgerblue;
+
+$tube-gradient-start: #639301;
+$tube-gradient-end: #a5e82e;
+$tube-border-color: #101010;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $game-background;
+
+  & h1 {
+    font-family: $font-game-title;
+    color: $game-white-color;
+  }
+}
+
+[vgn-bird] {
+  position: relative;
+  margin: 15px;
+  border: 5px solid $stage-game-border;
+  background: $stage-game-background;
+  height: 600px;
+  width: 1140px;
+  overflow: hidden;
+}
+
+.bird {
+  position: absolute;
+  width: 50px;
+  left: calc(50% - 25px);
+  bottom: 50%;
+  z-index: 10;
+}
+
+.tubes {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__border {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg, $tube-gradient-start, $tube-gradient-end);
+    border: 2px solid $tube-border-color;
+  }
+  
+  &__body {
+    height: 150px;
+    width: 110px;
+    background: linear-gradient(90deg, $tube-gradient-start, $tube-gradient-end);
+    border-left: 2px solid $tube-border-color;
+    border-right: 2px solid $tube-border-color;
+  }
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  font-family: $font-game-score;
+  color: $game-white-color;
+  z-index: 1;
+
+  &__title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  &__score {
+    font-size: 24px;
+  }
+}
+
+.restart {
+
+  &__modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba($game-background, 0.85);
+    z-index: 2;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    font-family: $font-game-score;
+    font-size: 18px;
+    color: $game-white-color;
+  }
+
+  &__button {
+    margin-top: 24px;
+    padding: 10px 16px;
+    font-family: $font-game-score;
+    font-size: 18px;
+    color: $game-white-color;
+    background: orange;
+    border-radius: 2px;
+    border: 2px solid $game-white-color;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.35);
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.start {
+
+  &__modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba($stage-game-background, 0.85);
+    z-index: 2;
+  }
+
+  &__text {
+    font-family: $font-game-score;
+    font-size: 18px;
+    color: $game-white-color;
+  }
+
+  &__button {
+    padding: 10px 16px;
+    transform: translateY(30px);
+    font-family: $font-game-score;
+    font-size: 18px;
+    color: $game-white-color;
+    background: orange;
+    border-radius: 2px;
+    border: 2px solid $game-white-color;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.35);
+    outline: none;
+    cursor: pointer;
+  }
+}

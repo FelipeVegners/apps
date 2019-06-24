@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Press+Start+2P");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: darkslateblue;
+}
+
+.content h1 {
+  font-family: "Permanent Marker", cursive;
+  color: whitesmoke;
+}
+
+[vgn-bird] {
+  position: relative;
+  margin: 15px;
+  border: 5px solid dodgerblue;
+  background: deepskyblue;
+  height: 600px;
+  width: 1140px;
+  overflow: hidden;
+}
+
+.bird {
+  position: absolute;
+  width: 50px;
+  left: calc(50% - 25px);
+  bottom: 50%;
+  z-index: 10;
+}
+
+.tubes {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tube__border {
+  height: 30px;
+  width: 130px;
+  background: linear-gradient(90deg, #639301, #a5e82e);
+  border: 2px solid #101010;
+}
+
+.tube__body {
+  height: 150px;
+  width: 110px;
+  background: linear-gradient(90deg, #639301, #a5e82e);
+  border-left: 2px solid #101010;
+  border-right: 2px solid #101010;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  font-family: "Press Start 2P", cursive;
+  color: whitesmoke;
+  z-index: 1;
+}
+
+.progress__title {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.progress__score {
+  font-size: 24px;
+}
+
+.restart__modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(72, 61, 139, 0.85);
+  z-index: 2;
+}
+
+.restart__text {
+  margin-bottom: 24px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+.restart__button {
+  margin-top: 24px;
+  padding: 10px 16px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: whitesmoke;
+  background: orange;
+  border-radius: 2px;
+  border: 2px solid whitesmoke;
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.35);
+  outline: none;
+  cursor: pointer;
+}
+
+.start__modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 191, 255, 0.85);
+  z-index: 2;
+}
+
+.start__text {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+.start__button {
+  padding: 10px 16px;
+  transform: translateY(30px);
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: whitesmoke;
+  background: orange;
+  border-radius: 2px;
+  border: 2px solid whitesmoke;
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.35);
+  outline: none;
+  cursor: pointer;
+}
